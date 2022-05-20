@@ -58,11 +58,29 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+      function createElement(tag){
+        let teste = document.createElement(tag);
+        return teste
+    }
+
     //   exercicio 1
-    let h1 = document.createElement('h1');
+    let h1 = createElement('h1');
     h1.innerText = 'Exercicio 5.2 - JavaScript DOM';
     let body = document.getElementsByTagName('body')[0];
     body.appendChild(h1);
+
+    // exercicio 2
+    let main = createElement('main');
+    main.className = 'main-content';
+
+    body.appendChild(main);
+    // exercicio 3
+    let section1 = createElement('section');
+    section1.className = 'center-content';
+    main.appendChild(section1);
+    
+  
+
 
     </script>
   </body>
