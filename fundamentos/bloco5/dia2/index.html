@@ -74,42 +74,72 @@
 
     //   exercicio 1
     let h1 = createElement('h1');
+    
     addText(h1, 'Exercicio 5.2 - JavaScript DOM');
+    
     let body = document.getElementsByTagName('body')[0];
+    
     addElement(body, h1);
 
     // exercicio 2
     let main = createElement('main');
+    
     main.className = 'main-content';
 
     addElement(body, main);
     
     // exercicio 3
     let section1 = createElement('section');
+    
     addClass(section1, 'center-content');
+    
     addElement(main, section1);
 
     // exercicio 4
     let p = createElement('p');
+    
     p.innerText = 'Hello Peter';
+    
     addElement(section1, p);
 
     // exercicio 5
     let section2 = createElement('section');
+    
     addClass(section2, 'left-content');
+    
     addElement(main, section2);
 
     // exercicio 6
     let section3 = createElement('section');
+    
     addClass(section3, 'right-content');
+    
     addElement(main, section3);
 
     // exercicio 7
     let img = createElement('img');
+    
     img.setAttribute('src', 'https://picsum.photos/200');
+    
     addClass(img, 'small-image');
-    addElement(section2, img)
+    
+    addElement(section2, img);
+    // exercicio 8
+    let ul = createElement('ul');
+    
+    addElement(section3, ul)
 
+    let numerosExtentos = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+    for (let index = 0; index < numerosExtentos.length; index += 1){
+        let element = numerosExtentos[index];
+        
+        let li1 = createElement('li');
+        
+        li1.innerText = element;
+        
+        addElement(ul, li1)
+    }
     </script>
   </body>
 </html>
