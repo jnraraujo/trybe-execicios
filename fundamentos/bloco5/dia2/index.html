@@ -62,28 +62,39 @@
         let teste = document.createElement(tag);
         return teste
     }
+    function addElement(parent, child){
+        parent.appendChild(child);
+    }
+    function addClass(tag, classes){
+        tag.className = classes;
+    }
+    function addText(tag, text){
+        tag.innerText = text
+    }
 
     //   exercicio 1
     let h1 = createElement('h1');
-    h1.innerText = 'Exercicio 5.2 - JavaScript DOM';
+    addText(h1, 'Exercicio 5.2 - JavaScript DOM');
     let body = document.getElementsByTagName('body')[0];
-    body.appendChild(h1);
+    addElement(body, h1);
 
     // exercicio 2
     let main = createElement('main');
     main.className = 'main-content';
 
-    body.appendChild(main);
+    addElement(body, main);
     
     // exercicio 3
     let section1 = createElement('section');
-    section1.className = 'center-content';
-    main.appendChild(section1);
+    addClass(section1, 'center-content');
+    addElement(main, section1);
 
     // exercicio 4
     let p = createElement('p');
     p.innerText = 'Hello Peter';
-    section1.appendChild(p);
+    addElement(section1, p);
+
+
     
   
 
